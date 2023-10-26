@@ -1,46 +1,15 @@
-#include <stdio.h>
+#include<stdio.h>
+ 
+int main(){
+    int r,s,a;
+    printf("Enter the age of ram ");
+    scanf("%d",&r);
+     printf("Enter the age of shyam ");
+    scanf("%d",&s);
+     printf("Enter the age of Ajay");
+    scanf("%d",&a);  
 
-int main()
-{
-    int n;
-
-    printf("Enter a number: ");
-    scanf("%d", &n);
-
-    for (int i = 1; i < 2 * n; i++)
-    {
-        int j = 1;
-        int k = 1;
-        if (i <= n)
-        {
-            if (i != n){
-                do {
-                    printf("  ");
-                    ++j;
-                } while (j <= n-i);
-            }
-
-            do {
-                printf(" *");
-                ++k;
-            } while (k <= 2*i-1);
-            
-        }
-        else
-        {
-
-            do{
-                printf("  ");
-                ++j;
-            } while (j <= i - n);
-
-            do {
-                printf(" *");
-                ++k;
-            } while (k <= 2*(2*n-i)-1);
+    s>r?printf("Ram is Young"):(r>a?printf("Ajay is Young"):printf("Shyam is Young"));
         
-        }
-        printf("\n");
-    }
-    return 0;
+return 0;
 }
